@@ -5,6 +5,8 @@ version: 1.0
 commands:
   heal:
     description: heal yourself
+  feed:
+    description: feed yourself
   time:
     aliases: [get_time]
     description: Get the current time.
