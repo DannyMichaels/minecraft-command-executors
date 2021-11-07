@@ -13,21 +13,21 @@ public class FruitTab implements TabCompleter {
 
 	@Override
 	public List<String> onTabComplete(CommandSender sender, Command cmd, String label, String[] args) {
-		List<String> arguments = new ArrayList<>();
+		List<String> autoCompleteTabOptions = new ArrayList<>();
 
 		// note that the command (aka /fruit) is args[0]
 
 		// if user entered the first arg: /fruit then show these tab options
 		if (args.length == 1) {
-			String[] autoCompleteOptions = { "Apple", "Pear", "Banana" };
-			return StringUtil.copyPartialMatches(args[0], Arrays.asList(autoCompleteOptions), new ArrayList<>());
+			String[] currentOptions = { "Apple", "Pear", "Banana" };
+			autoCompleteTabOptions = StringUtil.copyPartialMatches(args[0], Arrays.asList(currentOptions), new ArrayList<>());
 		} else if (args.length == 2) {
 			// if user already entered the 2nd argument, show these options.
-			String[] autoCompleteOptions = { "Red", "Green", "Purple" };
-			return StringUtil.copyPartialMatches(args[0], Arrays.asList(autoCompleteOptions), new ArrayList<>());
+			String[] currentOptions = { "Red", "Green", "Purple" };
+			autoCompleteTabOptions = StringUtil.copyPartialMatches(args[1], Arrays.asList(currentOptions), new ArrayList<>());
 		}
 
-		return arguments;
+		return autoCompleteTabOptions;
 	}
 
 }
