@@ -14,8 +14,8 @@ public class MyConsoleOnlyCommand implements CommandExecutor {
 			Player player = (Player) sender;
 			player.sendMessage("This is a console only command! you can't use it");
 		} else {
-			String username = System.getProperty("user.name");
-			System.out.println("Hello " + username + " console command successful!");
+			String username = System.getProperty("user.name"); // will get the OS username
+			System.out.println("Hello " + username + ", console command was successful!");
 		}
 
 		return false;
