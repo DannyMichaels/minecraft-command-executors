@@ -17,10 +17,13 @@ public class NumberCommand implements CommandExecutor {
 
 		Player player = (Player) sender;
 
+		if (args[0] == null) {
+			player.sendMessage("Please add an argument to this command. Example: /number 1");
+			return false;
+		}
+
 		String numberKey = args[0];
-
 		String result = numbersMap.get(numberKey) != null ? numbersMap.get(numberKey) : "INVALID";
-
 		player.sendMessage(result);
 
 		return false;
