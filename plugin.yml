@@ -10,3 +10,5 @@ commands:
     description: Get the current time.
   number:
     description: enter a number.
+  consoleonly:
+    description: can only be used in console
