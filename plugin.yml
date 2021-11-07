@@ -8,3 +8,5 @@ commands:
   time:
     aliases: [get_time]
     description: Get the current time.
+  number:
+    description: enter a number.

@@ -10,6 +10,6 @@ public class Main extends JavaPlugin {
 
 		getCommand("heal").setExecutor(new HealCommand());
 		getCommand("time").setExecutor(new TimeCommand());
-
+		getCommand("number").setExecutor(new NumberCommand()); // this "number" command has args
 	}
 }
