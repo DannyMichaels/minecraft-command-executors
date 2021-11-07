@@ -8,7 +8,7 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		System.out.println("MC COMMAND EXECUTORS PLUGIN ENABLED");
 
-		getCommand("heal").setExecutor(new HealCommand());		
+		getCommand("heal").setExecutor(new HealCommand());
 		getCommand("feed").setExecutor(new FeedCommand());
 		getCommand("time").setExecutor(new TimeCommand());
 		getCommand("number").setExecutor(new NumberCommand()); // this "number" command has args
