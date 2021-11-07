@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.command.CommandExecutor;
 
 public class NumberCommand implements CommandExecutor {
+	public static HashMap<String, String> numbersMap = getNumbersMap();
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -15,8 +16,6 @@ public class NumberCommand implements CommandExecutor {
 		// example: /number args[0] args[1] arg[2] (String[] args)
 
 		Player player = (Player) sender;
-
-		HashMap<String, String> numbersMap = getNumbersMap();
 
 		String numberKey = args[0];
 
@@ -27,7 +26,7 @@ public class NumberCommand implements CommandExecutor {
 		return false;
 	}
 
-	public HashMap<String, String> getNumbersMap() {
+	public static HashMap<String, String> getNumbersMap() {
 		HashMap<String, String> numbersMap = new HashMap<String, String>();
 		numbersMap.put("1", "ONE");
 		numbersMap.put("2", "TWO");
