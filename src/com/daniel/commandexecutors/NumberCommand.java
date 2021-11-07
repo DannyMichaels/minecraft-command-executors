@@ -12,19 +12,18 @@ public class NumberCommand implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-		// command with arguments.
+		// command with arguments. (uses 1 arg)
 		// example: /number args[0] args[1] arg[2] (String[] args)
 
 		Player player = (Player) sender;
 
-		if (args[0] == null) {
+		try {
+			String numberKey = args[0]; // the arg it uses
+			String result = numbersMap.get(numberKey) != null ? numbersMap.get(numberKey) : "INVALID";
+			player.sendMessage(result);
+		} catch (Exception error) {
 			player.sendMessage("Please add an argument to this command. Example: /number 1");
-			return false;
 		}
-
-		String numberKey = args[0];
-		String result = numbersMap.get(numberKey) != null ? numbersMap.get(numberKey) : "INVALID";
-		player.sendMessage(result);
 
 		return false;
 	}
