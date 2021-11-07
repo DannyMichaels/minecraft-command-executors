@@ -14,3 +14,4 @@ commands:
     description: enter a number.
   consoleonly:
     description: can only be used in console
+  fruit:
