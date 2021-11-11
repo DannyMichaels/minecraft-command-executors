@@ -16,7 +16,7 @@ public class TimeCommand implements CommandExecutor {
 		Calendar cal = Calendar.getInstance();
 		Player player = (Player) sender;
 
-		SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy h:mm a"); // Output "2012-09-26 10:00 PM"
+		SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy h:mm a"); // Output "10-20-2021 10:00 PM"
 		String formattedDateTime = dateFormat.format(cal.getTime());
 
 		player.sendMessage(ChatColor.RED + formattedDateTime);
